@@ -56,6 +56,18 @@
       <always_on>true</always_on>
       <update_rate>1000</update_rate>
       <visualize>false</visualize>
+      <imu>
+        <angular_velocity>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+        </linear_acceleration>
+      </imu>
       <plugin name="imu_sensor_plugin" filename="libgazebo_ros_imu_sensor.so">
         <ros>
           <remapping>~/out:=/nidarx_drone/imu/data</remapping>
@@ -77,6 +89,7 @@
       <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
       <control channel="0">
         <type>VELOCITY</type>
+        <offset>0</offset>
         <p_gain>0.20</p_gain>
         <cmd_max>2.5</cmd_max>
         <cmd_min>-2.5</cmd_min>
@@ -85,6 +98,7 @@
       </control>
       <control channel="1">
         <type>VELOCITY</type>
+        <offset>0</offset>
         <p_gain>0.20</p_gain>
         <cmd_max>2.5</cmd_max>
         <cmd_min>-2.5</cmd_min>
@@ -93,6 +107,7 @@
       </control>
       <control channel="2">
         <type>VELOCITY</type>
+        <offset>0</offset>
         <p_gain>0.20</p_gain>
         <cmd_max>2.5</cmd_max>
         <cmd_min>-2.5</cmd_min>
@@ -101,6 +116,7 @@
       </control>
       <control channel="3">
         <type>VELOCITY</type>
+        <offset>0</offset>
         <p_gain>0.20</p_gain>
         <cmd_max>2.5</cmd_max>
         <cmd_min>-2.5</cmd_min>

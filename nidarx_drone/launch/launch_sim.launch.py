@@ -1,6 +1,10 @@
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    SetEnvironmentVariable,
+)
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
@@ -15,6 +19,8 @@ def generate_launch_description():
     xacro_file = os.path.join(pkg_share, 'description', 'nidarx_drone.urdf.xacro')
     world_file = os.path.join(pkg_share, 'worlds', 'indoor.world')
     rviz_config = os.path.join(pkg_share, 'rviz', 'config.rviz')
+    gazebo_share = '/usr/share/gazebo-11'
+    gazebo_plugins = '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'
 
     # Process xacro → URDF
     robot_description = ParameterValue(
@@ -74,6 +80,43 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        SetEnvironmentVariable(
+            name='GAZEBO_RESOURCE_PATH',
+            value=os.pathsep.join(filter(None, [
+                gazebo_share,
+                os.environ.get('GAZEBO_RESOURCE_PATH', ''),
+            ])),
+        ),
+        SetEnvironmentVariable(
+            name='GAZEBO_MODEL_PATH',
+            value=os.pathsep.join(filter(None, [
+                os.path.join(gazebo_share, 'models'),
+                os.environ.get('GAZEBO_MODEL_PATH', ''),
+            ])),
+        ),
+        SetEnvironmentVariable(
+            name='GAZEBO_PLUGIN_PATH',
+            value=os.pathsep.join(filter(None, [
+                gazebo_plugins,
+                os.environ.get('GAZEBO_PLUGIN_PATH', ''),
+            ])),
+        ),
+        SetEnvironmentVariable(
+            name='GSETTINGS_BACKEND',
+            value='memory',
+        ),
+        SetEnvironmentVariable(
+            name='GSETTINGS_SCHEMA_DIR',
+            value='/usr/share/glib-2.0/schemas',
+        ),
+        SetEnvironmentVariable(
+            name='QT_QPA_PLATFORM',
+            value='xcb',
+        ),
+        SetEnvironmentVariable(
+            name='QT_STYLE_OVERRIDE',
+            value='Fusion',
+        ),
         use_sim_time_arg,
         rsp_node,
         gazebo_launch,
