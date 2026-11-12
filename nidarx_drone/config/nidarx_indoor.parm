@@ -1,0 +1,45 @@
+# ============================================================
+# NidarX Indoor Quadcopter — ArduCopter SITL Parameters
+# Pixhawk 2.4.8 sensors only (IMU, barometer, magnetometer)
+# NO GPS — indoor flight
+# ============================================================
+
+# ── Frame ──
+FRAME_CLASS     1       # Quad
+FRAME_TYPE      1       # X-frame
+
+# ── Disable GPS (indoor flight) ──
+GPS1_TYPE        0       # No GPS
+GPS2_TYPE        0
+SIM_GPS1_ENABLE  0       # Disable simulated GPS
+SIM_GPS2_ENABLE  0
+
+# ── EKF3 — use only IMU + Baro + Compass (no GPS) ──
+EK3_ENABLE      1
+EK3_SRC1_POSXY  0       # None (no GPS position)
+EK3_SRC1_VELXY  0       # None
+EK3_SRC1_POSZ   1       # Baro
+EK3_SRC1_VELZ   0       # None
+EK3_SRC1_YAW    1       # Compass
+AHRS_EKF_TYPE   3       # Use EKF3
+EK2_ENABLE      0       # Disable EKF2
+
+# ── Arming checks — relax for no-GPS indoor ──
+ARMING_CHECK    -17     # Disable GPS arming check (bitmask: everything except GPS)
+
+# ── Barometer (Pixhawk 2.4.8 onboard MS5611) ──
+# Default SITL values are fine; baro is always enabled
+
+# ── Compass (Pixhawk 2.4.8 onboard HMC5883L) ──
+COMPASS_USE     1
+COMPASS_USE2    0
+COMPASS_USE3    0
+
+# ── Flight modes ──
+FLTMODE1        0       # Stabilize
+FLTMODE4        2       # AltHold (good for indoor)
+FLTMODE6        5       # Loiter (if ever GPS-available)
+
+# ── Safety ──
+FS_THR_ENABLE   0       # Disable throttle failsafe for SITL
+BRD_SAFETY_DEFLT 0      # No safety switch required

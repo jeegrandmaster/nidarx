@@ -1,0 +1,9 @@
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/uninstall.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/nidarx_drone_uninstall.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/test.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/edit_cache.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/rebuild_cache.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/list_install_components.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/install.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/install/local.dir
+/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/install/strip.dir

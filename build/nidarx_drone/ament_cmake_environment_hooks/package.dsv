@@ -1,0 +1,4 @@
+source;share/nidarx_drone/local_setup.bash
+source;share/nidarx_drone/local_setup.dsv
+source;share/nidarx_drone/local_setup.sh
+source;share/nidarx_drone/local_setup.zsh

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="nidarx_drone">
+
+  <!-- ==================== Core Drone Description ==================== -->
+  <xacro:include filename="drone_core.xacro" />
+
+  <!-- ==================== Gazebo Configurations ==================== -->
+  <xacro:include filename="gazebo.xacro" />
+
+</robot>

@@ -1,0 +1,79 @@
+[0.000000] (-) TimerEvent: {}
+[0.000186] (nidarx_drone) JobQueued: {'identifier': 'nidarx_drone', 'dependencies': OrderedDict()}
+[0.000210] (nidarx_drone) JobStarted: {'identifier': 'nidarx_drone'}
+[0.006957] (nidarx_drone) JobProgress: {'identifier': 'nidarx_drone', 'progress': 'cmake'}
+[0.007469] (nidarx_drone) Command: {'cmd': ['/usr/bin/cmake', '/home/onlydrones/nidarx/nidarx_drone', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/onlydrones/nidarx/install/nidarx_drone'], 'cwd': '/home/onlydrones/nidarx/build/nidarx_drone', 'env': OrderedDict([('JJ_PAGER', 'cat'), ('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('EGL_PLATFORM', 'wayland'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CHROME_DEVTOOLS_MCP_JS', '/snap/antigravity/72/opt/antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js'), ('LANGUAGE', 'en_IN:en'), ('SNAP_INSTANCE_KEY', ''), ('USER', 'onlydrones'), ('SNAP_COMMON', '/var/snap/antigravity/common'), ('ANTIGRAVITY_SOURCE_METADATA', '{"tool":{"conversationId":"87af9ec5-87d3-4f6b-ad27-2eb68e541f32","stepIndex":33,"toolCall":{"id":"toolu_vrtx_01QTdjnd4c4xsvzK6XNDyS87","name":"run_command","argumentsJson":"{\\"CommandLine\\":\\"cd /home/onlydrones/nidarx \\\\u0026\\\\u0026 source /opt/ros/humble/setup.bash \\\\u0026\\\\u0026 colcon build --packages-select nidarx_drone --symlink-install 2\\\\u003e\\\\u00261\\",\\"WaitMsBeforeAsync\\":30000,\\"toolSummary\\":\\"Build ROS2 package\\"}"}}}'), ('GIT_EDITOR', 'false'), ('XDG_SESSION_TYPE', 'wayland'), ('ANTIGRAVITY_AGENTAPI_EXE', '/snap/antigravity/72/opt/antigravity/resources/bin/language_server'), ('SNAP_UID', '1000'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/onlydrones'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('SNAP_LIBRARY_PATH', '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32'), ('SNAP_APP_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/antigravity_antigravity.desktop'), ('OLDPWD', '/home/onlydrones/nidarx'), ('DISABLE_AUTO_UPDATE', 'true'), ('DESKTOP_SESSION', 'ubuntu'), ('SNAP_USER_DATA', '/home/onlydrones/snap/antigravity/72'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/antigravity_antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('JJ_EDITOR', 'false'), ('MANAGERPID', '1027'), ('SYSTEMD_EXEC_PID', '1273'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SNAP_REVISION', '72'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18024'), ('AGY_BROWSER_ACTIVE_PORT_FILE', '/home/onlydrones/.config/Antigravity/DevToolsActivePort'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('ZSH_TMUX_AUTOSTARTED', 'true'), ('LOGNAME', 'onlydrones'), ('AGY_BROWSER_WS_URL', 'ws://127.0.0.1:37553/devtools/browser/238c2194-0cea-42da-beae-38d692d4d49d'), ('SNAP_CONTEXT', '8gOppeH3lGeWxRpLH7Cl__nMUphUnEkc_-Kpw_251AjW3XYpp1W2'), ('JOURNAL_STREAM', '8:11868'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('SNAP_VERSION', '2.31.2'), ('USERNAME', 'onlydrones'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('SNAP_INSTANCE_NAME', 'antigravity'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('ANTIGRAVITY_APP_DATA_DIR', '/home/onlydrones/.gemini/antigravity'), ('ANTIGRAVITY_LS_VERSION', 'hub-2.31.2'), ('PATH', '/home/onlydrones/.gemini/antigravity/bin:/home/onlydrones/.config/Antigravity/bin:/usr/lib/ccache:/home/onlydrones/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/onlydrones/.local/bin:/opt/ros/humble/bin:/home/onlydrones/.npm-global/bin:/home/onlydrones/.npm-global/bin:/usr/lib/ccache:/home/onlydrones/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/onlydrones/.local/bin:/home/onlydrones/.npm-global/bin:/home/onlydrones/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/onlydrones/.local/bin'), ('SESSION_MANAGER', 'local/Hydrogen-PC:@/tmp/.ICE-unix/1239,unix/Hydrogen-PC:/tmp/.ICE-unix/1239'), ('INVOCATION_ID', '06bb79209d4f4e4badebc158b5ce1995'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('SNAP_DATA', '/var/snap/antigravity/72'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTIGRAVITY_CONVERSATION_ID', '87af9ec5-87d3-4f6b-ad27-2eb68e541f32'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.T2DQY3'), ('LS_COLORS', ''), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SNAP_USER_COMMON', '/home/onlydrones/snap/antigravity/common'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SNAP_ARCH', 'amd64'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SNAP_COOKIE', '8gOppeH3lGeWxRpLH7Cl__nMUphUnEkc_-Kpw_251AjW3XYpp1W2'), ('ANTIGRAVITY_PROJECT_ID', '1d352bbb-27d9-4b79-a3bd-a46498518ec7'), ('SHELL', '/bin/bash'), ('ANTIGRAVITY_LS_ADDRESS', 'localhost:34201'), ('QT_ACCESSIBILITY', '1'), ('NO_AT_BRIDGE', '1'), ('SNAP_REEXEC', ''), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('SNAP_NAME', 'antigravity'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', 'd3c73a98-20fe-424f-a75a-e59f5c33f52f'), ('PWD', '/home/onlydrones/nidarx/build/nidarx_drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('SNAP_REAL_HOME', '/home/onlydrones'), ('GAZEBO_PLUGIN_PATH', '/usr/local/lib:'), ('ZSH_TMUX_AUTOSTART', 'false'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('HGEDITOR', 'false'), ('SNAP_EUID', '1000'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('SNAP', '/snap/antigravity/72'), ('COLCON', '1'), ('ANTIGRAVITY_CSRF_TOKEN', '0d154360-14b2-449b-a8fa-26c610de2649'), ('SNAP_APP_NAME', 'antigravity'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099618] (-) TimerEvent: {}
+[0.144401] (nidarx_drone) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199745] (-) TimerEvent: {}
+[0.263500] (nidarx_drone) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.273926] (nidarx_drone) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299953] (-) TimerEvent: {}
+[0.364834] (nidarx_drone) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.378258] (nidarx_drone) StdoutLine: {'line': b'-- Check for working C compiler: /usr/lib/ccache/cc - skipped\n'}
+[0.378666] (nidarx_drone) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.379212] (nidarx_drone) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.383036] (nidarx_drone) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400142] (-) TimerEvent: {}
+[0.495280] (nidarx_drone) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.500196] (-) TimerEvent: {}
+[0.504862] (nidarx_drone) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped\n'}
+[0.505179] (nidarx_drone) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.505881] (nidarx_drone) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.508869] (nidarx_drone) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600306] (-) TimerEvent: {}
+[0.662974] (nidarx_drone) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700410] (-) TimerEvent: {}
+[0.717177] (nidarx_drone) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.754990] (nidarx_drone) StdoutLine: {'line': b'-- Found rclpy: 3.3.22 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.757964] (nidarx_drone) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[0.761248] (nidarx_drone) StdoutLine: {'line': b'-- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)\n'}
+[0.800590] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.800787] (-) TimerEvent: {}
+[0.804760] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.812361] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.823011] (nidarx_drone) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.835915] (nidarx_drone) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.893867] (nidarx_drone) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.894959] (nidarx_drone) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.895176] (nidarx_drone) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.900939] (-) TimerEvent: {}
+[0.942989] (nidarx_drone) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.946642] (nidarx_drone) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.001069] (-) TimerEvent: {}
+[1.057408] (nidarx_drone) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.090635] (nidarx_drone) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.101207] (-) TimerEvent: {}
+[1.133413] (nidarx_drone) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.141607] (nidarx_drone) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.201338] (-) TimerEvent: {}
+[1.259301] (nidarx_drone) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.259547] (nidarx_drone) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.301461] (-) TimerEvent: {}
+[1.372327] (nidarx_drone) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.374042] (nidarx_drone) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.401613] (-) TimerEvent: {}
+[1.502017] (-) TimerEvent: {}
+[1.573232] (nidarx_drone) StderrLine: {'line': b'CMake Error at CMakeLists.txt:13 (find_package):\n'}
+[1.573467] (nidarx_drone) StderrLine: {'line': b'  By not providing "Findjoint_state_publisher_gui.cmake" in CMAKE_MODULE_PATH\n'}
+[1.573574] (nidarx_drone) StderrLine: {'line': b'  this project has asked CMake to find a package configuration file provided\n'}
+[1.573663] (nidarx_drone) StderrLine: {'line': b'  by "joint_state_publisher_gui", but CMake did not find one.\n'}
+[1.573746] (nidarx_drone) StderrLine: {'line': b'\n'}
+[1.573835] (nidarx_drone) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[1.573925] (nidarx_drone) StderrLine: {'line': b'  "joint_state_publisher_gui" with any of the following names:\n'}
+[1.574014] (nidarx_drone) StderrLine: {'line': b'\n'}
+[1.574101] (nidarx_drone) StderrLine: {'line': b'    joint_state_publisher_guiConfig.cmake\n'}
+[1.574369] (nidarx_drone) StderrLine: {'line': b'    joint_state_publisher_gui-config.cmake\n'}
+[1.574472] (nidarx_drone) StderrLine: {'line': b'\n'}
+[1.574558] (nidarx_drone) StderrLine: {'line': b'  Add the installation prefix of "joint_state_publisher_gui" to\n'}
+[1.574637] (nidarx_drone) StderrLine: {'line': b'  CMAKE_PREFIX_PATH or set "joint_state_publisher_gui_DIR" to a directory\n'}
+[1.574716] (nidarx_drone) StderrLine: {'line': b'  containing one of the above files.  If "joint_state_publisher_gui" provides\n'}
+[1.574816] (nidarx_drone) StderrLine: {'line': b'  a separate development package or SDK, be sure it has been installed.\n'}
+[1.574900] (nidarx_drone) StderrLine: {'line': b'\n'}
+[1.574988] (nidarx_drone) StderrLine: {'line': b'\n'}
+[1.575067] (nidarx_drone) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.575170] (nidarx_drone) StdoutLine: {'line': b'See also "/home/onlydrones/nidarx/build/nidarx_drone/CMakeFiles/CMakeOutput.log".\n'}
+[1.580774] (nidarx_drone) CommandEnded: {'returncode': 1}
+[1.602099] (-) TimerEvent: {}
+[1.604771] (nidarx_drone) JobEnded: {'identifier': 'nidarx_drone', 'rc': 1}
+[1.615680] (-) EventReactorShutdown: {}

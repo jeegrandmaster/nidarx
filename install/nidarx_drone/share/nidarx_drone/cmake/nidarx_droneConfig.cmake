@@ -1,0 +1,1 @@
+/home/onlydrones/nidarx/build/nidarx_drone/ament_cmake_core/nidarx_droneConfig.cmake

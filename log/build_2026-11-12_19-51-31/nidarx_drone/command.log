@@ -1,0 +1,6 @@
+Invoking command in '/home/onlydrones/nidarx/build/nidarx_drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/onlydrones/nidarx/nidarx_drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/onlydrones/nidarx/install/nidarx_drone
+Invoked command in '/home/onlydrones/nidarx/build/nidarx_drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/onlydrones/nidarx/nidarx_drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/onlydrones/nidarx/install/nidarx_drone
+Invoking command in '/home/onlydrones/nidarx/build/nidarx_drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/onlydrones/nidarx/build/nidarx_drone -- -j12 -l12
+Invoked command in '/home/onlydrones/nidarx/build/nidarx_drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/onlydrones/nidarx/build/nidarx_drone -- -j12 -l12
+Invoking command in '/home/onlydrones/nidarx/build/nidarx_drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/onlydrones/nidarx/build/nidarx_drone
+Invoked command in '/home/onlydrones/nidarx/build/nidarx_drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/onlydrones/nidarx/build/nidarx_drone
