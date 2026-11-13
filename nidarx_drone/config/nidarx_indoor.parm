@@ -40,6 +40,12 @@ FLTMODE1        0       # Stabilize
 FLTMODE4        2       # AltHold (good for indoor)
 FLTMODE6        5       # Loiter (if ever GPS-available)
 
+# No-GPS takeoff:
+#   mode ALT_HOLD
+#   arm throttle
+#   rc 3 1600
+# NAV_TAKEOFF requires a position estimate and will fail with GPS disabled.
+
 # ── Safety ──
 FS_THR_ENABLE   0       # Disable throttle failsafe for SITL
 BRD_SAFETY_DEFLT 0      # No safety switch required

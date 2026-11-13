@@ -1,0 +1,29 @@
+[0.011s] Invoking command in '/home/onlydrones/nidarx/build/nidarx_drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/onlydrones/nidarx/build/nidarx_drone -- -j12 -l12
+[0.059s] Invoked command in '/home/onlydrones/nidarx/build/nidarx_drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/onlydrones/nidarx/build/nidarx_drone -- -j12 -l12
+[0.073s] Invoking command in '/home/onlydrones/nidarx/build/nidarx_drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/onlydrones/nidarx/build/nidarx_drone
+[0.082s] -- Install configuration: ""
+[0.083s] -- Execute custom install script
+[0.083s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/drone_core.xacro
+[0.083s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/gazebo.xacro
+[0.083s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/nidarx_drone.urdf.xacro
+[0.084s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/launch_sim.launch.py
+[0.084s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/rsp.launch.py
+[0.084s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/worlds/indoor.world
+[0.084s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/rviz/config.rviz
+[0.085s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/config/nidarx_indoor.parm
+[0.085s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/package_run_dependencies/nidarx_drone
+[0.085s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/parent_prefix_path/nidarx_drone
+[0.085s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/ament_prefix_path.sh
+[0.085s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/ament_prefix_path.dsv
+[0.086s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/path.sh
+[0.086s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/path.dsv
+[0.086s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.bash
+[0.086s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.sh
+[0.086s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.zsh
+[0.087s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.dsv
+[0.087s] -- Symlinking: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/package.dsv
+[0.097s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/packages/nidarx_drone
+[0.097s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/cmake/nidarx_droneConfig.cmake
+[0.097s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/cmake/nidarx_droneConfig-version.cmake
+[0.098s] -- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/package.xml
+[0.099s] Invoked command in '/home/onlydrones/nidarx/build/nidarx_drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/onlydrones/nidarx/build/nidarx_drone

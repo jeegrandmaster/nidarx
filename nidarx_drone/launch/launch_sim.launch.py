@@ -2,9 +2,11 @@ import os
 from launch import LaunchDescription
 from launch.actions import (
     DeclareLaunchArgument,
+    ExecuteProcess,
     IncludeLaunchDescription,
     SetEnvironmentVariable,
 )
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
@@ -32,6 +34,24 @@ def generate_launch_description():
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time', default_value='true',
         description='Use simulation (Gazebo) clock'
+    )
+    sitl_bin_arg = DeclareLaunchArgument(
+        'sitl_bin',
+        default_value=os.environ.get(
+            'ARDUPILOT_SITL_BIN',
+            '/home/onlydrones/ardupilot/build/sitl/bin/arducopter',
+        ),
+        description='Path to the ArduCopter SITL executable',
+    )
+    sitl_params_arg = DeclareLaunchArgument(
+        'sitl_params',
+        default_value=os.path.join(pkg_share, 'config', 'nidarx_indoor.parm'),
+        description='ArduCopter SITL parameter file',
+    )
+    start_sitl_arg = DeclareLaunchArgument(
+        'start_sitl',
+        default_value='true',
+        description='Start ArduCopter SITL with Gazebo',
     )
 
     # ── Robot State Publisher ──
@@ -66,6 +86,20 @@ def generate_launch_description():
             '-x', '0.0',
             '-y', '0.0',
             '-z', '0.195',      # ground clearance = leg_length + offset
+        ],
+        output='screen',
+    )
+
+    sitl_process = ExecuteProcess(
+        condition=IfCondition(LaunchConfiguration('start_sitl')),
+        cmd=[
+            LaunchConfiguration('sitl_bin'),
+            '--model', 'gazebo-iris',
+            '--speedup', '1',
+            '--sim-address', '127.0.0.1',
+            '--sim-port-in', '9003',
+            '--sim-port-out', '9002',
+            '--defaults', LaunchConfiguration('sitl_params'),
         ],
         output='screen',
     )
@@ -118,8 +152,12 @@ def generate_launch_description():
             value='Fusion',
         ),
         use_sim_time_arg,
+        sitl_bin_arg,
+        sitl_params_arg,
+        start_sitl_arg,
         rsp_node,
         gazebo_launch,
+        sitl_process,
         spawn_entity,
         rviz_node,
     ])
