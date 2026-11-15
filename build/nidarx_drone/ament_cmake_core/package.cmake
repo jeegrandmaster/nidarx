@@ -5,7 +5,7 @@ set(nidarx_drone_BUILD_DEPENDS "rclpy" "xacro" "robot_state_publisher" "joint_st
 set(nidarx_drone_BUILDTOOL_DEPENDS "ament_cmake")
 set(nidarx_drone_BUILD_EXPORT_DEPENDS "rclpy" "xacro" "robot_state_publisher" "joint_state_publisher_gui" "gazebo_ros")
 set(nidarx_drone_BUILDTOOL_EXPORT_DEPENDS )
-set(nidarx_drone_EXEC_DEPENDS "rclpy" "xacro" "robot_state_publisher" "joint_state_publisher_gui" "gazebo_ros")
+set(nidarx_drone_EXEC_DEPENDS "gazebo_plugins" "geometry_msgs" "nav_msgs" "tf2_ros" "rclpy" "xacro" "robot_state_publisher" "joint_state_publisher_gui" "gazebo_ros")
 set(nidarx_drone_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(nidarx_drone_GROUP_DEPENDS )
 set(nidarx_drone_MEMBER_OF_GROUPS )

@@ -94,12 +94,13 @@
     </sensor>
   </gazebo>
 
-  <!-- RPLIDARA1 Plugin-->
+  <!-- SLAMTEC RPLIDAR A1M8: 360-degree scan, 12 m maximum range. -->
   <gazebo reference="rplidar_link">
     <sensor name="rplidar_sensor" type="ray">
       <pose>0 0 0.025 0 0 0</pose>
       <always_on>true</always_on>
-      <update_rate>10</update_rate>
+      <update_rate>5.5</update_rate>
+      <!-- Show the ray fan in the Gazebo client. -->
       <visualize>true</visualize>
       <ray>
         <scan>
@@ -110,14 +111,33 @@
             <max_angle>6.28319</max_angle>
           </horizontal>
         </scan>
+        <range>
+          <min>0.15</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
       </ray>
-      <plugin name="rplidar_plugin" filename="libgazebo_ros_laser.so">
+      <plugin name="rplidar_plugin" filename="libgazebo_ros_ray_sensor.so">
         <ros>
           <remapping>~/out:=/nidarx_drone/rplidar/data</remapping>
         </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
         <frame_name>rplidar_link</frame_name>
       </plugin>
     </sensor>
+  </gazebo>
+
+  <!-- Ground-truth model odometry for RViz and downstream consumers. -->
+  <gazebo>
+    <plugin name="odometry_plugin" filename="libgazebo_ros_p3d.so">
+      <ros>
+        <remapping>odom:=/nidarx_drone/odom</remapping>
+      </ros>
+      <body_name>base_link</body_name>
+      <frame_name>world</frame_name>
+      <update_rate>30</update_rate>
+      <gaussian_noise>0.0</gaussian_noise>
+    </plugin>
   </gazebo>
 
   <!-- ==================== ArduPilot Plugin ==================== -->

@@ -318,6 +318,9 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "description" "launch" "worlds" "rviz" "config" "DESTINATION" "share/nidarx_drone")
 ament_cmake_symlink_install_directory("/home/onlydrones/nidarx/nidarx_drone" DIRECTORY "description" "launch" "worlds" "rviz" "config" "DESTINATION" "share/nidarx_drone")
 
+# install(PROGRAMS "scripts/odom_tf_broadcaster.py" "DESTINATION" "lib/nidarx_drone")
+ament_cmake_symlink_install_programs("/home/onlydrones/nidarx/nidarx_drone" PROGRAMS "scripts/odom_tf_broadcaster.py" "DESTINATION" "lib/nidarx_drone")
+
 # install(FILES "/home/onlydrones/nidarx/build/nidarx_drone/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/nidarx_drone" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/onlydrones/nidarx/nidarx_drone" FILES "/home/onlydrones/nidarx/build/nidarx_drone/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/nidarx_drone" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

@@ -90,6 +90,12 @@ def generate_launch_description():
         output='screen',
     )
 
+    odom_tf_node = Node(
+        package='nidarx_drone',
+        executable='odom_tf_broadcaster.py',
+        output='screen',
+    )
+
     sitl_process = ExecuteProcess(
         condition=IfCondition(LaunchConfiguration('start_sitl')),
         cmd=[
@@ -159,5 +165,6 @@ def generate_launch_description():
         gazebo_launch,
         sitl_process,
         spawn_entity,
+        odom_tf_node,
         rviz_node,
     ])
