@@ -5,6 +5,7 @@ from launch.actions import (
     ExecuteProcess,
     IncludeLaunchDescription,
     SetEnvironmentVariable,
+    TimerAction,
 )
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -53,6 +54,29 @@ def generate_launch_description():
         default_value='true',
         description='Start ArduCopter SITL with Gazebo',
     )
+    start_mavproxy_arg = DeclareLaunchArgument(
+        'start_mavproxy',
+        default_value='true',
+        description='Start MAVProxy connected to the local SITL TCP link',
+    )
+    mavproxy_bin_arg = DeclareLaunchArgument(
+        'mavproxy_bin',
+        default_value=os.environ.get(
+            'MAVPROXY_BIN',
+            '/home/onlydrones/.local/bin/mavproxy.py',
+        ),
+        description='Path to the MAVProxy executable',
+    )
+    mavproxy_out_arg = DeclareLaunchArgument(
+        'mavproxy_out',
+        default_value='udp:127.0.0.1:14550',
+        description='MAVProxy MAVLink output endpoint',
+    )
+    mavproxy_terminal_arg = DeclareLaunchArgument(
+        'mavproxy_terminal',
+        default_value='/usr/bin/xterm',
+        description='Terminal emulator used to run the interactive MAVProxy console',
+    )
 
     # ── Robot State Publisher ──
     rsp_node = Node(
@@ -77,17 +101,22 @@ def generate_launch_description():
     )
 
     # ── Spawn the drone into Gazebo ──
-    spawn_entity = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        arguments=[
-            '-topic', 'robot_description',
-            '-entity', 'nidarx_drone',
-            '-x', '0.0',
-            '-y', '0.0',
-            '-z', '0.195',      # ground clearance = leg_length + offset
+    spawn_entity = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+                package='gazebo_ros',
+                executable='spawn_entity.py',
+                arguments=[
+                    '-topic', 'robot_description',
+                    '-entity', 'nidarx_drone',
+                    '-x', '0.0',
+                    '-y', '0.0',
+                    '-z', '0.195',      # ground clearance = leg_length + offset
+                ],
+                output='screen',
+            ),
         ],
-        output='screen',
     )
 
     odom_tf_node = Node(
@@ -108,6 +137,26 @@ def generate_launch_description():
             '--defaults', LaunchConfiguration('sitl_params'),
         ],
         output='screen',
+    )
+
+    mavproxy_process = ExecuteProcess(
+        condition=IfCondition(LaunchConfiguration('start_mavproxy')),
+        cmd=[
+            LaunchConfiguration('mavproxy_terminal'),
+            '-T', 'MAVProxy',
+            '-hold',
+            '-e',
+            LaunchConfiguration('mavproxy_bin'),
+            '--master=tcp:127.0.0.1:5760',
+            '--out', LaunchConfiguration('mavproxy_out'),
+            '--force-connected',
+            '--console',
+        ],
+        output='screen',
+    )
+    mavproxy_process = TimerAction(
+        period=5.0,
+        actions=[mavproxy_process],
     )
 
     # ── RViz2 ──
@@ -161,9 +210,14 @@ def generate_launch_description():
         sitl_bin_arg,
         sitl_params_arg,
         start_sitl_arg,
+        start_mavproxy_arg,
+        mavproxy_bin_arg,
+        mavproxy_out_arg,
+        mavproxy_terminal_arg,
         rsp_node,
         gazebo_launch,
         sitl_process,
+        mavproxy_process,
         spawn_entity,
         odom_tf_node,
         rviz_node,

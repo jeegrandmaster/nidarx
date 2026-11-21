@@ -1,6 +1,7 @@
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/drone_core.xacro
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/gazebo.xacro
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/nidarx_drone.urdf.xacro
+/home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/__pycache__/launch_sim.launch.cpython-310.pyc
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/launch_sim.launch.py
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/rsp.launch.py
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/worlds/indoor.world
