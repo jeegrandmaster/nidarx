@@ -129,6 +129,7 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration('start_sitl')),
         cmd=[
             LaunchConfiguration('sitl_bin'),
+            '--wipe',
             '--model', 'gazebo-iris',
             '--speedup', '1',
             '--sim-address', '127.0.0.1',

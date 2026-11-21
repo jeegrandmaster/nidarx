@@ -4,6 +4,8 @@
   <!-- ==================== Gazebo Materials ==================== -->
   <gazebo reference="body_link">
     <material>Gazebo/DarkGrey</material>
+    <mu1>100</mu1>
+    <mu2>100</mu2>
   </gazebo>
 
   <gazebo reference="front_marker">
@@ -123,6 +125,39 @@
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
         <frame_name>rplidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- PONO TSDI0: downward-facing single-point ToF LiDAR, 0.05-10 m at 50 Hz. -->
+  <gazebo reference="downward_lidar_link">
+    <sensor name="downward_lidar_sensor" type="ray">
+      <!-- A +X ray rotated about Y points down along -Z. -->
+      <pose>0 0 0 0 1.5708 0</pose>
+      <always_on>true</always_on>
+      <update_rate>50</update_rate>
+      <visualize>true</visualize>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1</samples>
+            <resolution>1.0</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>0.0</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="downward_lidar_plugin" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=/nidarx_drone/downward_lidar/data</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>downward_lidar_link</frame_name>
       </plugin>
     </sensor>
   </gazebo>

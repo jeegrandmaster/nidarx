@@ -148,12 +148,22 @@
         </geometry>
         <material name="black"/>
       </visual>
+      <collision>
+        <origin xyz="0 0 ${-leg_length/2}" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="${leg_radius}" length="${leg_length}"/>
+        </geometry>
+      </collision>
     </link>
     <joint name="leg_${id}_joint" type="fixed">
       <parent link="base_link"/>
       <child link="leg_${id}"/>
       <origin xyz="${x} ${y} -0.04" rpy="0 0 0"/>
     </joint>
+    <gazebo reference="leg_${id}">
+      <mu1>100</mu1>
+      <mu2>100</mu2>
+    </gazebo>
   </xacro:macro>
 
   <!-- ==================== Instantiate Arms (X-config) ==================== -->
@@ -209,5 +219,29 @@
     <parent link="base_link"/>
     <child link="rplidar_link"/>
     <origin xyz="0 0 0.025" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Downward-facing single-point LiDAR -->
+  <link name="downward_lidar_link">
+    <visual>
+      <geometry>
+        <box size="0.03 0.02 0.01"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.03 0.02 0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.000001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.000001"/>
+    </inertial>
+  </link>
+  <joint name="downward_lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="downward_lidar_link"/>
+    <origin xyz="0 0 -0.045" rpy="0 0 0"/>
   </joint>
 </robot>
