@@ -18,11 +18,18 @@ install(
 )
 
 install(
-  PROGRAMS scripts/odom_tf_broadcaster.py
+  PROGRAMS
+    scripts/odom_tf_broadcaster.py
+    scripts/planar_lidar_odom.py
+    scripts/mapping_plane.py
+    scripts/lidar_flight_bridge.py
   DESTINATION lib/${PROJECT_NAME}
 )
+install(FILES scripts/lidar_runtime.py DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
+  find_package(ament_cmake_pytest REQUIRED)
+  ament_add_pytest_test(lidar_tests test)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)
   set(ament_cmake_cpplint_FOUND TRUE)

@@ -1,6 +1,6 @@
 # ============================================================
 # NidarX Indoor Quadcopter — ArduCopter SITL Parameters
-# Pixhawk 2.4.8 sensors only (IMU, barometer, magnetometer)
+# Gazebo IMU, horizontal lidar odometry and downward lidar
 # NO GPS — indoor flight
 # ============================================================
 
@@ -14,15 +14,38 @@ GPS2_TYPE        0
 SIM_GPS1_ENABLE  0       # Disable simulated GPS
 SIM_GPS2_ENABLE  0
 
-# ── EKF3 — use only IMU + Baro + Compass (no GPS) ──
+# ── GPS-free EKF3 navigation over the SITL companion MAVLink port ──
 EK3_ENABLE      1
-EK3_SRC1_POSXY  0       # None (no GPS position)
-EK3_SRC1_VELXY  0       # None
-EK3_SRC1_POSZ   1       # Baro
-EK3_SRC1_VELZ   0       # None
-EK3_SRC1_YAW    1       # Compass
+EK3_SRC1_POSXY  6       # ExternalNav from horizontal scan matching
+EK3_SRC1_VELXY  0       # No independently measured velocity
+EK3_SRC1_POSZ   2       # Downward rangefinder over the flat floor
+EK3_SRC1_VELZ   0
+EK3_SRC1_YAW    6       # Scan yaw is aligned to Gazebo north at spawn
 AHRS_EKF_TYPE   3       # Use EKF3
 EK2_ENABLE      0       # Disable EKF2
+VISO_TYPE       1       # MAVLink VISION_POSITION_ESTIMATE
+VISO_POS_M_NSE  0.10    # Planar scan position measurement noise in metres
+SERIAL1_PROTOCOL 2      # MAVLink2 on the second SITL TCP port
+
+# The indoor world uses the default SITL launch site's geodetic origin.
+AHRS_OPTIONS    16      # Use recorded origin for GPS-free navigation
+AHRS_ORIGIN_LAT -35.363262
+AHRS_ORIGIN_LON 149.165237
+AHRS_ORIGIN_ALT 584
+
+RNGFND1_TYPE    10      # MAVLink DISTANCE_SENSOR
+RNGFND1_ORIENT  25      # Downward (pitch 270)
+RNGFND1_MIN     0.05
+RNGFND1_MAX     10.0
+RNGFND1_POS_Z   0.045   # Positive down in ArduPilot body FRD
+RNGFND1_GNDCLR  0.145   # Distance from emitter to floor on the landing legs
+EK3_RNG_M_NSE   0.10    # Range measurement noise in metres
+WP_RFND_USE     0       # Guided takeoff target is relative to home
+WP_SPD_UP       0.50    # Indoor Guided climb speed in m/s
+WP_SPD          0.70    # Travel about 13 cm per horizontal scan
+WP_ACC          0.50    # Near-level acceleration for mapping in m/s²
+WP_YAW_BEHAVIOR 0       # Hold pilot heading through indoor Guided moves
+PLND_ENABLED    0       # The indoor model lands on the floor without an IR beacon
 
 # ── Arming checks — SITL/no-GPS indoor ──
 ARMING_CHECK    0       # Disable pre-arm checks for indoor SITL
@@ -68,6 +91,7 @@ DISARM_DELAY    0
 MOT_SAFE_DISARM 0
 MOT_SPIN_ARM    0
 MOT_SPIN_MIN    0
+MOT_THST_HOVER  0.326   # Measured steady hover throttle for this Gazebo airframe
 
 # ── Barometer (Pixhawk 2.4.8 onboard MS5611) ──
 # Default SITL values are fine; baro is always enabled
@@ -80,13 +104,7 @@ COMPASS_USE3    0
 # ── Flight modes ──
 FLTMODE1        0       # Stabilize
 FLTMODE4        2       # AltHold (good for indoor)
-FLTMODE6        5       # Loiter (if ever GPS-available)
-
-# No-GPS takeoff:
-#   mode ALT_HOLD
-#   arm throttle
-#   rc 3 1600
-# NAV_TAKEOFF requires a position estimate and will fail with GPS disabled.
+FLTMODE6        5       # Loiter using lidar position hold
 
 # ── Safety ──
 FS_THR_ENABLE   0       # Disable throttle failsafe for SITL

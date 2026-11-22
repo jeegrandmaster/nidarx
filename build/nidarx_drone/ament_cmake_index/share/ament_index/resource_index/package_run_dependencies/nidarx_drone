@@ -1,1 +1,1 @@
-rclpy;xacro;robot_state_publisher;joint_state_publisher_gui;gazebo_ros;gazebo_plugins;geometry_msgs;nav_msgs;tf2_ros;ament_lint_auto;ament_lint_common
+rclpy;xacro;robot_state_publisher;joint_state_publisher_gui;gazebo_ros;ament_index_python;gazebo_plugins;geometry_msgs;launch;launch_ros;nav_msgs;tf2_ros;tf2_ros_py;message_filters;sensor_msgs;std_srvs;rcl_interfaces;rviz2;slam_toolbox;python3-numpy;python3-pymavlink-pip;ament_cmake_pytest;ament_lint_auto;ament_lint_common

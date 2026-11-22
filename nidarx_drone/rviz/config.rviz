@@ -51,7 +51,7 @@ Visualization Manager:
       Description Source: Topic
       Description Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /robot_description
@@ -86,7 +86,17 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /nidarx_drone/odom
+        Value: /nidarx_drone/lidar/odom
+      Value: true
+    - Class: rviz_default_plugins/Map
+      Name: Flight plane map
+      Enabled: true
+      Alpha: 0.75
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+        Value: /map
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -134,7 +144,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: world
+    Fixed Frame: lidar_odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -174,7 +184,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.5
+      Distance: 13
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1

@@ -1,4 +1,6 @@
 import os
+
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import (
     DeclareLaunchArgument,
@@ -9,10 +11,9 @@ from launch.actions import (
 )
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, Command
+from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
-from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
@@ -36,6 +37,16 @@ def generate_launch_description():
         'use_sim_time', default_value='true',
         description='Use simulation (Gazebo) clock'
     )
+    pilot_altitude_arg = DeclareLaunchArgument(
+        'pilot_altitude', default_value='1.5',
+        description='Target base_link height above the indoor floor in metres (0.5 to 3.5)',
+    )
+    gui_arg = DeclareLaunchArgument(
+        'gui', default_value='true', description='Show Gazebo and RViz')
+    lidar_params = {
+        'use_sim_time': LaunchConfiguration('use_sim_time'),
+        'pilot_altitude': ParameterValue(LaunchConfiguration('pilot_altitude'), value_type=float),
+    }
     sitl_bin_arg = DeclareLaunchArgument(
         'sitl_bin',
         default_value=os.environ.get(
@@ -96,6 +107,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'world': world_file,
+            'gui': LaunchConfiguration('gui'),
             'verbose': 'true',
         }.items(),
     )
@@ -119,9 +131,34 @@ def generate_launch_description():
         ],
     )
 
-    odom_tf_node = Node(
+    lidar_odom = Node(
         package='nidarx_drone',
-        executable='odom_tf_broadcaster.py',
+        executable='planar_lidar_odom.py',
+        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}],
+        output='screen',
+    )
+    mapping_plane = Node(
+        package='nidarx_drone', executable='mapping_plane.py',
+        parameters=[lidar_params], output='screen',
+    )
+    flight_bridge = Node(
+        package='nidarx_drone', executable='lidar_flight_bridge.py',
+        parameters=[lidar_params], output='screen',
+    )
+    slam = Node(
+        package='slam_toolbox', executable='async_slam_toolbox_node', name='slam_toolbox',
+        parameters=[
+            os.path.join(get_package_share_directory('slam_toolbox'), 'config',
+                         'mapper_params_online_async.yaml'),
+            {'use_sim_time': LaunchConfiguration('use_sim_time'),
+             'odom_frame': 'lidar_odom', 'base_frame': 'base_link',
+             'scan_topic': '/nidarx_drone/mapping_scan',
+             'resolution': 0.05, 'map_update_interval': 1.0,
+             'min_laser_range': 0.16, 'max_laser_range': 12.0, 'min_pass_through': 0,
+             # Different beams enter the slice as the drone levels, even at a fixed XY.
+             'minimum_time_interval': 0.5, 'minimum_travel_distance': 0.0,
+             'minimum_travel_heading': 0.0, 'use_scan_barycenter': False},
+        ],
         output='screen',
     )
 
@@ -132,6 +169,7 @@ def generate_launch_description():
             '--wipe',
             '--model', 'gazebo-iris',
             '--speedup', '1',
+            '--serial0', 'tcp:0',
             '--sim-address', '127.0.0.1',
             '--sim-port-in', '9003',
             '--sim-port-out', '9002',
@@ -162,6 +200,7 @@ def generate_launch_description():
 
     # ── RViz2 ──
     rviz_node = Node(
+        condition=IfCondition(LaunchConfiguration('gui')),
         package='rviz2',
         executable='rviz2',
         arguments=['-d', rviz_config],
@@ -208,6 +247,8 @@ def generate_launch_description():
             value='Fusion',
         ),
         use_sim_time_arg,
+        pilot_altitude_arg,
+        gui_arg,
         sitl_bin_arg,
         sitl_params_arg,
         start_sitl_arg,
@@ -220,6 +261,9 @@ def generate_launch_description():
         sitl_process,
         mavproxy_process,
         spawn_entity,
-        odom_tf_node,
+        lidar_odom,
+        mapping_plane,
+        flight_bridge,
+        slam,
         rviz_node,
     ])

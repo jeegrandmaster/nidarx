@@ -69,29 +69,40 @@
   <xacro:rotor_lift_drag id="3" direction="-1" opposite="1"/>
 
   <!-- ==================== IMU Sensor (Pixhawk 2.4.8 onboard IMU) ==================== -->
+  <xacro:macro name="imu_noise" params="">
+    <imu>
+      <angular_velocity>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+      </linear_acceleration>
+    </imu>
+  </xacro:macro>
   <gazebo reference="base_link">
     <sensor name="imu_sensor" type="imu">
       <pose>0 0 0 3.141593 0 0</pose>
       <always_on>true</always_on>
       <update_rate>1000</update_rate>
       <visualize>false</visualize>
-      <imu>
-        <angular_velocity>
-          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></x>
-          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></y>
-          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></z>
-        </angular_velocity>
-        <linear_acceleration>
-          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
-          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
-          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
-        </linear_acceleration>
-      </imu>
+      <xacro:imu_noise/>
+    </sensor>
+    <!-- ArduPilot consumes FRD IMU samples above. Publish body-aligned FLU
+         attitude for projecting the lidar beams into a horizontal plane. -->
+    <sensor name="ros_imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>1000</update_rate>
+      <xacro:imu_noise/>
       <plugin name="imu_sensor_plugin" filename="libgazebo_ros_imu_sensor.so">
         <ros>
           <remapping>~/out:=/nidarx_drone/imu/data</remapping>
         </ros>
         <frame_name>imu_link</frame_name>
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
       </plugin>
     </sensor>
   </gazebo>
@@ -99,7 +110,6 @@
   <!-- SLAMTEC RPLIDAR A1M8: 360-degree scan, 12 m maximum range. -->
   <gazebo reference="rplidar_link">
     <sensor name="rplidar_sensor" type="ray">
-      <pose>0 0 0.025 0 0 0</pose>
       <always_on>true</always_on>
       <update_rate>5.5</update_rate>
       <!-- Show the ray fan in the Gazebo client. -->
@@ -110,7 +120,7 @@
             <samples>360</samples>
             <resolution>1.0</resolution>
             <min_angle>0.0</min_angle>
-            <max_angle>6.28319</max_angle>
+            <max_angle>${2*pi*359/360}</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -132,8 +142,6 @@
   <!-- PONO TSDI0: downward-facing single-point ToF LiDAR, 0.05-10 m at 50 Hz. -->
   <gazebo reference="downward_lidar_link">
     <sensor name="downward_lidar_sensor" type="ray">
-      <!-- A +X ray rotated about Y points down along -Z. -->
-      <pose>0 0 0 0 1.5708 0</pose>
       <always_on>true</always_on>
       <update_rate>50</update_rate>
       <visualize>true</visualize>

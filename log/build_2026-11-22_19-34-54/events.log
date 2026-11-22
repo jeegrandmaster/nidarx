@@ -1,0 +1,133 @@
+[0.000000] (-) TimerEvent: {}
+[0.000436] (nidarx_drone) JobQueued: {'identifier': 'nidarx_drone', 'dependencies': OrderedDict()}
+[0.000484] (nidarx_drone) JobStarted: {'identifier': 'nidarx_drone'}
+[0.006983] (nidarx_drone) JobProgress: {'identifier': 'nidarx_drone', 'progress': 'cmake'}
+[0.008582] (nidarx_drone) JobProgress: {'identifier': 'nidarx_drone', 'progress': 'build'}
+[0.009599] (nidarx_drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/onlydrones/nidarx/build/nidarx_drone', '--', '-j12', '-l12'], 'cwd': '/home/onlydrones/nidarx/build/nidarx_drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'onlydrones'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/onlydrones'), ('OLDPWD', '/home/onlydrones'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1081'), ('SYSTEMD_EXEC_PID', '1536'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3630'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'onlydrones'), ('JOURNAL_STREAM', '8:18436'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'onlydrones'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/onlydrones/.npm-global/bin:/usr/lib/ccache:/home/onlydrones/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/onlydrones/.local/bin:/home/onlydrones/.npm-global/bin:/home/onlydrones/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/onlydrones/.local/bin'), ('SESSION_MANAGER', 'local/Hydrogen-PC:@/tmp/.ICE-unix/1276,unix/Hydrogen-PC:/tmp/.ICE-unix/1276'), ('INVOCATION_ID', '56c51355005a463799816182eb1fa098'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.PJGOZ3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:62755a93-f8b9-40d6-a98f-002e648d743f'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/onlydrones/nidarx/build/nidarx_drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/local/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.082900] (nidarx_drone) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099847] (-) TimerEvent: {}
+[0.197518] (nidarx_drone) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.199944] (-) TimerEvent: {}
+[0.211160] (nidarx_drone) StdoutLine: {'line': b'-- Found rclpy: 3.3.22 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.211758] (nidarx_drone) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[0.212527] (nidarx_drone) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[0.249633] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.251738] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.257379] (nidarx_drone) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.271830] (nidarx_drone) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.289151] (nidarx_drone) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.300108] (-) TimerEvent: {}
+[0.316287] (nidarx_drone) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.317664] (nidarx_drone) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400239] (-) TimerEvent: {}
+[0.419609] (nidarx_drone) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.500413] (-) TimerEvent: {}
+[0.505948] (nidarx_drone) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[0.550639] (nidarx_drone) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[0.554115] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.16.0\n'}
+[0.565407] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.567640] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[0.576448] (nidarx_drone) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[0.577085] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[0.591822] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[0.592004] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[0.592122] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[0.592358] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[0.592502] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[0.592651] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[0.592749] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[0.592860] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[0.592960] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[0.593053] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[0.593148] (nidarx_drone) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[0.593242] (nidarx_drone) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[0.600535] (-) TimerEvent: {}
+[0.666547] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.16.0\n'}
+[0.667052] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[0.667393] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[0.681542] (nidarx_drone) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[0.689150] (nidarx_drone) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[0.693396] (nidarx_drone) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[0.700645] (-) TimerEvent: {}
+[0.708133] (nidarx_drone) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[0.767864] (nidarx_drone) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[0.784321] (nidarx_drone) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[0.800790] (-) TimerEvent: {}
+[0.827192] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[0.827827] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[0.849613] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.16.0\n'}
+[0.855603] (nidarx_drone) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[0.872788] (nidarx_drone) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[0.900898] (-) TimerEvent: {}
+[0.918006] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[0.918916] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[0.919831] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[0.920292] (nidarx_drone) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.920481] (nidarx_drone) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.937301] (nidarx_drone) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[0.937795] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[0.938515] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[0.938782] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.16.0\n'}
+[0.940149] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[0.940621] (nidarx_drone) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[0.994857] (nidarx_drone) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.001023] (-) TimerEvent: {}
+[1.011364] (nidarx_drone) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.062068] (nidarx_drone) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.079710] (nidarx_drone) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.101145] (-) TimerEvent: {}
+[1.124955] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.125434] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.16.0\n'}
+[1.126409] (nidarx_drone) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.130252] (nidarx_drone) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[1.135026] (nidarx_drone) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 1.3.14 (/opt/ros/humble/share/ament_cmake_pytest/cmake)\n'}
+[1.201275] (-) TimerEvent: {}
+[1.301601] (-) TimerEvent: {}
+[1.401890] (-) TimerEvent: {}
+[1.485470] (nidarx_drone) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.502047] (-) TimerEvent: {}
+[1.572978] (nidarx_drone) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.573520] (nidarx_drone) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.573823] (nidarx_drone) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.575332] (nidarx_drone) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.576778] (nidarx_drone) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.582251] (nidarx_drone) StdoutLine: {'line': b'-- Generating done\n'}
+[1.584435] (nidarx_drone) StdoutLine: {'line': b'-- Build files have been written to: /home/onlydrones/nidarx/build/nidarx_drone\n'}
+[1.602146] (-) TimerEvent: {}
+[1.615749] (nidarx_drone) CommandEnded: {'returncode': 0}
+[1.617682] (nidarx_drone) JobProgress: {'identifier': 'nidarx_drone', 'progress': 'install'}
+[1.628428] (nidarx_drone) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/onlydrones/nidarx/build/nidarx_drone'], 'cwd': '/home/onlydrones/nidarx/build/nidarx_drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'onlydrones'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/onlydrones'), ('OLDPWD', '/home/onlydrones'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1081'), ('SYSTEMD_EXEC_PID', '1536'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3630'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'onlydrones'), ('JOURNAL_STREAM', '8:18436'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'onlydrones'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/onlydrones/.npm-global/bin:/usr/lib/ccache:/home/onlydrones/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/onlydrones/.local/bin:/home/onlydrones/.npm-global/bin:/home/onlydrones/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/onlydrones/.local/bin'), ('SESSION_MANAGER', 'local/Hydrogen-PC:@/tmp/.ICE-unix/1276,unix/Hydrogen-PC:/tmp/.ICE-unix/1276'), ('INVOCATION_ID', '56c51355005a463799816182eb1fa098'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.PJGOZ3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:62755a93-f8b9-40d6-a98f-002e648d743f'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/onlydrones/nidarx/build/nidarx_drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/local/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.637286] (nidarx_drone) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.637734] (nidarx_drone) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.638002] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/drone_core.xacro\n'}
+[1.638160] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/gazebo.xacro\n'}
+[1.638294] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/description/nidarx_drone.urdf.xacro\n'}
+[1.638395] (nidarx_drone) StdoutLine: {'line': b'-- Symlinking: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/__pycache__/launch_sim.launch.cpython-310.pyc\n'}
+[1.648951] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/launch_sim.launch.py\n'}
+[1.649177] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/launch/rsp.launch.py\n'}
+[1.649447] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/worlds/indoor.world\n'}
+[1.649662] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/rviz/config.rviz\n'}
+[1.649792] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/config/nidarx_indoor.parm\n'}
+[1.650072] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/odom_tf_broadcaster.py\n'}
+[1.650203] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/planar_lidar_odom.py\n'}
+[1.650452] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/mapping_plane.py\n'}
+[1.650616] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/lidar_flight_bridge.py\n'}
+[1.650745] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/lidar_runtime.py\n'}
+[1.650883] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/package_run_dependencies/nidarx_drone\n'}
+[1.650984] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/parent_prefix_path/nidarx_drone\n'}
+[1.651087] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/ament_prefix_path.sh\n'}
+[1.651188] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/ament_prefix_path.dsv\n'}
+[1.651288] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/path.sh\n'}
+[1.651401] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/path.dsv\n'}
+[1.651502] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.bash\n'}
+[1.651600] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.sh\n'}
+[1.651699] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.zsh\n'}
+[1.651817] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/local_setup.dsv\n'}
+[1.651938] (nidarx_drone) StdoutLine: {'line': b'-- Symlinking: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/package.dsv\n'}
+[1.662301] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/packages/nidarx_drone\n'}
+[1.662591] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/cmake/nidarx_droneConfig.cmake\n'}
+[1.662716] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/cmake/nidarx_droneConfig-version.cmake\n'}
+[1.662844] (nidarx_drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/package.xml\n'}
+[1.664681] (nidarx_drone) CommandEnded: {'returncode': 0}
+[1.692734] (nidarx_drone) JobEnded: {'identifier': 'nidarx_drone', 'rc': 0}
+[1.693324] (-) EventReactorShutdown: {}

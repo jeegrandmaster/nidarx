@@ -8,6 +8,10 @@
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/rviz/config.rviz
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/config/nidarx_indoor.parm
 /home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/odom_tf_broadcaster.py
+/home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/planar_lidar_odom.py
+/home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/mapping_plane.py
+/home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/lidar_flight_bridge.py
+/home/onlydrones/nidarx/install/nidarx_drone/lib/nidarx_drone/lidar_runtime.py
 /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/package_run_dependencies/nidarx_drone
 /home/onlydrones/nidarx/install/nidarx_drone/share/ament_index/resource_index/parent_prefix_path/nidarx_drone
 /home/onlydrones/nidarx/install/nidarx_drone/share/nidarx_drone/environment/ament_prefix_path.sh
